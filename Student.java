@@ -54,23 +54,23 @@ public class Student {
         	System.out.println("Error writing to input file: " + e.getMessage());
     	}
 
-		try  {
-		   // create a scanner for reading the input file
-  		   Scanner scanner = new Scanner(new File("input.txt"));
+	try  {
+		// create a scanner for reading the input file
+  		Scanner scanner = new Scanner(new File("input.txt"));
 
 
-		  // read the number of students
-		  int numStudents = Integer.parseInt(scanner.nextLine());
+		// read the number of students
+		int numStudents = Integer.parseInt(scanner.nextLine());
 
-		  // read each student's data
-		  for (int i = 0; i < numStudents; i++) {
+		// read each student's data
+		for (int i = 0; i < numStudents; i++) {
 		    String[] nameParts = scanner.nextLine().split(", ");
 		    String course = scanner.nextLine();
 		    String[] gradeParts = scanner.nextLine().split(" ");
 
 		    double[] grades = new double[gradeParts.length];
 			for (int d = 0; d < gradeParts.length; d++) {
-			grades[d] = Double.parseDouble(gradeParts[d]);
+				grades[d] = Double.parseDouble(gradeParts[d]);
 			}
 
 		    Student student;
@@ -87,9 +87,9 @@ public class Student {
 
 		    students.add(student);
 		  }
-		} catch (Exception e) {
-		  System.out.println("Error: " + e.getMessage());
-		}
+	} catch (Exception e) {
+		System.out.println("Error: " + e.getMessage());
+	}
 
 	System.out.println("Total students: " + students.size());
 
