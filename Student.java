@@ -37,21 +37,23 @@ public class Student {
 
   	List<Student> students = new ArrayList<>();
 
-		try (FileWriter writer = new FileWriter("input.txt")) {
 
-			// writer.write("Doe, John\nEnglish\n80 90 95\n");
-			// writer.write("Smith, Jane\nScience\n95 85 90 80\n");
-			// writer.write("Johnson, Bob\nMath\n75 85 95 90 80 85 90\n");
-		    writer.write("3\n");
-		    writer.write("Doe, John\n");
-		    writer.write("English\n80 90 95\n");
-		    writer.write("Smith, Jane\n");
-		    writer.write("Science\n95 85 90 80\n");
-		    writer.write("Johnson, Bob\n");
-		    writer.write("Math\n75 85 95 90\n");
-		} catch (IOException e) {
-		    System.out.println("Error writing to input file: " + e.getMessage());
-		}
+    	try (FileWriter writer = new FileWriter("input.txt")) {
+    		//didn't connected to input file so wrote data to input file
+        	writer.write("4\n");
+        	writer.write("Geller, Monica\n");
+        	writer.write("English\n80 90 95\n");
+        	writer.write("Doe, Jane\n");
+        	writer.write("Science\n95 85 80 90\n");
+        	writer.write("Green, Rachel\n");
+        	writer.write("Math\n75 85 95 90\n");
+        	writer.write("Johnson, Joey\n");
+        	writer.write("Math\n75 85 55 70\n");
+
+    	} catch (IOException e) {
+        	System.out.println("Error writing to input file: " + e.getMessage());
+    	}
+
 		try  {
 		   // create a scanner for reading the input file
   		   Scanner scanner = new Scanner(new File("input.txt"));
