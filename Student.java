@@ -174,7 +174,92 @@ public class Student {
       return "F";
     }
   }
- 
+	
+ //public void printGradeDistribution(PrintWriter writer, List<Student> students) {
+
+	//     // Initialize counters for each letter grade
+	//     int aCount = 0;
+	//     int bCount = 0;
+	//     int cCount = 0;
+	//     int dCount = 0;
+	//     int fCount = 0;
+
+	//     // Count the number of students with each letter grade
+	//     for (Student student : students) {
+	//         String letterGrade = student.calculateLetterGrade(englishStudent.calculateAverage());
+	//         switch (letterGrade) {
+	//             case "A":
+	//                 aCount++;
+	//                 break;
+	//             case "B":
+	//                 bCount++;
+	//                 break;
+	//             case "C":
+	//                 cCount++;
+	//                 break;
+	//             case "D":
+	//                 dCount++;
+	//                 break;
+	//             case "F":
+	//                 fCount++;
+	//                 break;
+	//         }
+	//     }
+	//     for (Student student : students) {
+	//         String letterGrade = student.calculateLetterGrade(scienceStudent.calculateAverage());
+	//         switch (letterGrade) {
+	//             case "A":
+	//                 aCount++;
+	//                 break;
+	//             case "B":
+	//                 bCount++;
+	//                 break;
+	//             case "C":
+	//                 cCount++;
+	//                 break;
+	//             case "D":
+	//                 dCount++;
+	//                 break;
+	//             case "F":
+	//                 fCount++;
+	//                 break;
+	//         }
+	//     }
+	//     for (Student student : students) {
+	//         String letterGrade = student.calculateLetterGrade(mathStudent.calculateAverage());
+	//         switch (letterGrade) {
+	//             case "A":
+	//                 aCount++;
+	//                 break;
+	//             case "B":
+	//                 bCount++;
+	//                 break;
+	//             case "C":
+	//                 cCount++;
+	//                 break;
+	//             case "D":
+	//                 dCount++;
+	//                 break;
+	//             case "F":
+	//                 fCount++;
+	//                 break;
+	//         }
+	//     }
+
+	//     // Print the grade distribution
+	//     writer.println("\nGrade Distribution");
+	//     writer.printf("A: ", aCount);
+	//     writer.printf(" ");
+	//     writer.printf("B: ", bCount);
+	//     writer.printf(" ");
+	//     writer.printf("C: ", cCount);
+	//     writer.printf(" ");
+	//     writer.printf("D: ", dCount);
+	//     writer.printf(" ");
+	//     writer.printf("F: ", fCount);
+	// }
+
+
 
 }
 
