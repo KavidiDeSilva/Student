@@ -91,9 +91,72 @@ public class Student {
 		System.out.println("Error: " + e.getMessage());
 	}
 
-	System.out.println("Total students: " + students.size());
+		//Print size of the array and Student data
+		System.out.println("Total students: " + students.size());
+		System.out.println(" ");
+
+	  	for (Student student : students) {
+		  if (student instanceof EnglishStudent) {
+		    EnglishStudent englishStudent = (EnglishStudent) student;
+		    System.out.println("English Student: " + student.getFirstName() + " " + student.getLastName());
+		    System.out.println("Final Average: " + englishStudent.calculateAverage() + ", Letter Grade: " + student.calculateLetterGrade(englishStudent.calculateAverage()));
+		    System.out.println(" ");
+		  }
+		}
+		for (Student student : students) {
+		  if (student instanceof ScienceStudent) {
+		    ScienceStudent scienceStudent = (ScienceStudent) student;
+		    System.out.println("Science Student: " + student.getFirstName() + " " + student.getLastName());
+		    System.out.println("Final Average: " + scienceStudent.calculateAverage() + ", Letter Grade: " + student.calculateLetterGrade(scienceStudent.calculateAverage()));
+		    System.out.println(" ");
+		  }
+		}
+		for (Student student : students) {
+		  if (student instanceof MathStudent) {
+		    MathStudent mathStudent = (MathStudent) student;
+		    System.out.println("Math Student: " + student.getFirstName() + " " + student.getLastName());
+		    System.out.println("Final Average: " + mathStudent.calculateAverage() + ", Letter Grade: " + student.calculateLetterGrade(mathStudent.calculateAverage()));
+		    System.out.println(" ");
+		  }
+		}
+		
+	//output file
+    	try {
+  	// Open a file for writing
+	  PrintWriter outputFile = new PrintWriter("output.txt");
+
+	  for (Student student : students) {
+	    if (student instanceof EnglishStudent) {
+	      EnglishStudent englishStudent = (EnglishStudent) student;
+	      outputFile.println("Subject: English");
+	      outputFile.println("Student: " + student.getFirstName() + " " + student.getLastName());
+	      outputFile.println("Final Average: " + englishStudent.calculateAverage());
+	      outputFile.println("Letter Grade: " + student.calculateLetterGrade(englishStudent.calculateAverage()));
+	      outputFile.println(" ");
+	    } else if (student instanceof ScienceStudent) {
+	      ScienceStudent scienceStudent = (ScienceStudent) student;
+	      outputFile.println("Subject: Science");
+	      outputFile.println("Student: " + student.getFirstName() + " " + student.getLastName());
+	      outputFile.println("Final Average: " + scienceStudent.calculateAverage());
+	      outputFile.println("Letter Grade: " + student.calculateLetterGrade(scienceStudent.calculateAverage()));
+	      outputFile.println(" ");
+	    } else if (student instanceof MathStudent) {
+	      MathStudent mathStudent = (MathStudent) student;
+	      outputFile.println("Subject: Math");
+	      outputFile.println("Student: " + student.getFirstName() + " " + student.getLastName());
+	      outputFile.println("Final Average: " + mathStudent.calculateAverage());
+	      outputFile.println("Letter Grade: " + student.calculateLetterGrade(mathStudent.calculateAverage()));
+	      outputFile.println(" ");
+	    }
+  }
 
 
+	  // Close the file when you are done writing
+	  outputFile.close();
+
+	} catch (FileNotFoundException e) {
+	  System.out.println("Error: Unable to create output file");
+	}
 
   }
 	
