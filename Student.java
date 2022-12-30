@@ -37,7 +37,7 @@ public class Student {
 
   	List<Student> students = new ArrayList<>();
 
-	//read data from the input file
+	
     	try (FileWriter writer = new FileWriter("input.txt")) {
     		//didn't connected to input file so wrote data to input file
         	writer.write("4\n");
@@ -53,7 +53,8 @@ public class Student {
     	} catch (IOException e) {
         	System.out.println("Error writing to input file: " + e.getMessage());
     	}
-
+	  
+	//read data from the input file
 	try  {
 		// create a scanner for reading the input file
   		Scanner scanner = new Scanner(new File("input.txt"));
@@ -69,9 +70,9 @@ public class Student {
 		    String[] gradeParts = scanner.nextLine().split(" ");
 
 		    double[] grades = new double[gradeParts.length];
-			for (int d = 0; d < gradeParts.length; d++) {
-				grades[d] = Double.parseDouble(gradeParts[d]);
-			}
+		    for (int d = 0; d < gradeParts.length; d++) {
+			grades[d] = Double.parseDouble(gradeParts[d]);
+		    }
 
 		    Student student;
 		    if (course.equals("English")) {
