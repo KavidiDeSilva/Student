@@ -1,0 +1,10 @@
+3
+Doe, John
+English
+80 90 95
+Smith, Jane
+Science
+95 85 90 80
+Johnson, Bob
+Math
+75 85 95 90
