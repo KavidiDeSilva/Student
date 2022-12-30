@@ -37,7 +37,7 @@ public class Student {
 
   	List<Student> students = new ArrayList<>();
 
-
+	//read data from the input file
     	try (FileWriter writer = new FileWriter("input.txt")) {
     		//didn't connected to input file so wrote data to input file
         	writer.write("4\n");
@@ -86,7 +86,7 @@ public class Student {
 
 
 		    students.add(student);
-		  }
+		}
 	} catch (Exception e) {
 		System.out.println("Error: " + e.getMessage());
 	}
@@ -95,41 +95,9 @@ public class Student {
 
 
 
-
-
-  	// Create objects of the other classes
-    Student student = new Student("John", "Doe", "English");
-    EnglishStudent englishStudent = new EnglishStudent("Jane", "Doe", 90.00, 95.00, 100.00);
-    ScienceStudent scienceStudent = new ScienceStudent("Bob", "Smith", 95.00, 85.00, 80.00, 90.00);
-    MathStudent mathStudent = new MathStudent("Alice", "Smith", 95.00, 80.00, 85.00, 90.00);
-
-
-
-
-       // Calculate and print the final averages for each student
-    System.out.println("Student: " + student.getFirstName() + " " + student.getLastName());
-    System.out.println("English Student: " + englishStudent.getFirstName() + " " + englishStudent.getLastName() + ", Final Average: " + englishStudent.calculateAverage() + ", Letter Grade: " + student.calculateLetterGrade(englishStudent.calculateAverage()));
-    System.out.println("Science Student: " + scienceStudent.getFirstName() + " " + scienceStudent.getLastName() + ", Final Average: " + scienceStudent.calculateAverage() + ", Letter Grade: " + student.calculateLetterGrade(scienceStudent.calculateAverage()));
-    System.out.println("Math Student: " + mathStudent.getFirstName() + " " + mathStudent.getLastName() + ", Final Average: " + mathStudent.calculateAverage() + ", Letter Grade: " + student.calculateLetterGrade(mathStudent.calculateAverage()));
-    
-
-    try {
-    // Open a file for writing
-	PrintWriter outputFile = new PrintWriter("output.txt");
-
-	// Write the student information to the file
-	outputFile.println("Student Name: " + englishStudent.getFirstName() + " " + englishStudent.getLastName());
-	outputFile.println("Final Exam Grade: " + englishStudent.getFinalExamGrade());
-	outputFile.println("Final Average: " + englishStudent.calculateAverage());
-	outputFile.println("Letter Grade: " + student.calculateLetterGrade(englishStudent.calculateAverage()));
-
-	// Close the file when you are done writing
-	outputFile.close();
-	} catch (FileNotFoundException e) {
-	  System.out.println("Error: Unable to create output file");
-	}
-
   }
+	
+	
   public static String calculateLetterGrade(double average) {
     if (average >= 90) {
       return "A";
