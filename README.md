@@ -1,9 +1,5 @@
 # Student
 Challenge 4
-Instructions
-1. You can write the code in java language.
-2. Upload the code to github with the support of your mentors.
-3. Share the link of your github repository on or 
 
 Problem
 Read student information from a file, store the data, compute final grades, and then print a summary report to an output file.
