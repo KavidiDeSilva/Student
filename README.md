@@ -25,21 +25,21 @@ Student (Base Class)
 		|_getMidtermGrade();
 		|_getFinalExamGrade();
 		|_calculateAverage();
-|
+
 |_ScienceStudent (Derived classes)
 		|_getAttendanceGrade();
 		|_getProjectGrade();
 		|_getMidtermGrade();
 		|_getFinalExamGrade();
 		|_calculateAverage();
-|
+
 |_MathStudent (Derived classes)
 		|_getQuizAverage();
 		|_getTest1Grade();
 		|_getTest2Grade();
 		|_getFinalExamGrade();
 		|_calculateAverage();
-------------------------
+
 
 
 On CMD (To run the file)
