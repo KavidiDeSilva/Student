@@ -58,6 +58,17 @@ public class Student {
 	try  {
 		// create a scanner for reading the input file
   		Scanner scanner = new Scanner(new File("input.txt"));
+  		
+  		File file = new File("input.txt");
+			BufferedReader br = new BufferedReader(new FileReader("input.txt"));     
+			if (br.readLine() == null && file.length() == 0)
+			{
+			    System.out.println("No errors, and file empty");
+			}                
+			else
+			{
+			    System.out.println("File contains something");
+			}
 
 
 		// read the number of students
@@ -121,46 +132,60 @@ public class Student {
 		  }
 		}
 		
-	//output file
+			//output file
     	try {
-  	// Open a file for writing
-	  PrintWriter outputFile = new PrintWriter("output.txt");
+		  	// Open a file for writing
+			  PrintWriter outputFile = new PrintWriter("output.txt");
 
-	  for (Student student : students) {
-	    if (student instanceof EnglishStudent) {
-	      EnglishStudent englishStudent = (EnglishStudent) student;
-	      outputFile.println("Subject: English");
-	      outputFile.println("Student: " + student.getFirstName() + " " + student.getLastName());
-	      outputFile.println("Final Average: " + englishStudent.calculateAverage());
-	      outputFile.println("Letter Grade: " + student.calculateLetterGrade(englishStudent.calculateAverage()));
-	      outputFile.println(" ");
-	    } else if (student instanceof ScienceStudent) {
-	      ScienceStudent scienceStudent = (ScienceStudent) student;
-	      outputFile.println("Subject: Science");
-	      outputFile.println("Student: " + student.getFirstName() + " " + student.getLastName());
-	      outputFile.println("Final Average: " + scienceStudent.calculateAverage());
-	      outputFile.println("Letter Grade: " + student.calculateLetterGrade(scienceStudent.calculateAverage()));
-	      outputFile.println(" ");
-	    } else if (student instanceof MathStudent) {
-	      MathStudent mathStudent = (MathStudent) student;
-	      outputFile.println("Subject: Math");
-	      outputFile.println("Student: " + student.getFirstName() + " " + student.getLastName());
-	      outputFile.println("Final Average: " + mathStudent.calculateAverage());
-	      outputFile.println("Letter Grade: " + student.calculateLetterGrade(mathStudent.calculateAverage()));
-	      outputFile.println(" ");
-	    }
-  }
+			  for (Student student : students) {
+			    if (student instanceof EnglishStudent) {
+			      EnglishStudent englishStudent = (EnglishStudent) student;
+			      outputFile.println("Subject: English");
+			      outputFile.println("Student: " + student.getFirstName() + " " + student.getLastName());
+			      outputFile.println("Final Average: " + englishStudent.calculateAverage());
+			      outputFile.println("Letter Grade: " + student.calculateLetterGrade(englishStudent.calculateAverage()));
+			      outputFile.println(" ");
+			    } else if (student instanceof ScienceStudent) {
+			      ScienceStudent scienceStudent = (ScienceStudent) student;
+			      outputFile.println("Subject: Science");
+			      outputFile.println("Student: " + student.getFirstName() + " " + student.getLastName());
+			      outputFile.println("Final Average: " + scienceStudent.calculateAverage());
+			      outputFile.println("Letter Grade: " + student.calculateLetterGrade(scienceStudent.calculateAverage()));
+			      outputFile.println(" ");
+			    } else if (student instanceof MathStudent) {
+			      MathStudent mathStudent = (MathStudent) student;
+			      outputFile.println("Subject: Math");
+			      outputFile.println("Student: " + student.getFirstName() + " " + student.getLastName());
+			      outputFile.println("Final Average: " + mathStudent.calculateAverage());
+			      outputFile.println("Letter Grade: " + student.calculateLetterGrade(mathStudent.calculateAverage()));
+			      outputFile.println(" ");
+			    }
+		  }
 
 
-	  // Close the file when you are done writing
-	  outputFile.close();
+			  // Close the file when you are done writing
+			  outputFile.close();
 
-	} catch (FileNotFoundException e) {
-	  System.out.println("Error: Unable to create output file");
-	}
+			} catch (FileNotFoundException e) {
+			  System.out.println("Error: Unable to create output file");
+			}
+
+
+
+
+
+
+
+
+
 
   }
 	
+
+
+
+
+
 	
   public static String calculateLetterGrade(double average) {
     if (average >= 90) {

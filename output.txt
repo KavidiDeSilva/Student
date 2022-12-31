@@ -1,0 +1,20 @@
+Subject: English
+Student: Monica Geller
+Final Average: 89.0
+Letter Grade: B
+ 
+Subject: Science
+Student: Jane Doe
+Final Average: 86.0
+Letter Grade: B
+ 
+Subject: Math
+Student: Rachel Green
+Final Average: 87.25
+Letter Grade: B
+ 
+Subject: Math
+Student: Joey Johnson
+Final Average: 72.25
+Letter Grade: C
+ 
