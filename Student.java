@@ -64,10 +64,12 @@ public class Student {
 			if (br.readLine() == null && file.length() == 0)
 			{
 			    System.out.println("No errors, and file empty");
+			    System.out.println(" ");
 			}                
 			else
 			{
 			    System.out.println("File contains something");
+			    System.out.println(" ");
 			}
 
 
@@ -111,7 +113,7 @@ public class Student {
 		  if (student instanceof EnglishStudent) {
 		    EnglishStudent englishStudent = (EnglishStudent) student;
 		    System.out.println("English Student: " + student.getFirstName() + " " + student.getLastName());
-		    System.out.println("Final Average: " + englishStudent.calculateAverage() + ", Letter Grade: " + student.calculateLetterGrade(englishStudent.calculateAverage()));
+		    System.out.println("Final Exam Grade: " + englishStudent.getFinalExamGrade() + ". Final Average: " + englishStudent.calculateAverage() + ", Letter Grade: " + student.calculateLetterGrade(englishStudent.calculateAverage()));
 		    System.out.println(" ");
 		  }
 		}
@@ -119,7 +121,7 @@ public class Student {
 		  if (student instanceof ScienceStudent) {
 		    ScienceStudent scienceStudent = (ScienceStudent) student;
 		    System.out.println("Science Student: " + student.getFirstName() + " " + student.getLastName());
-		    System.out.println("Final Average: " + scienceStudent.calculateAverage() + ", Letter Grade: " + student.calculateLetterGrade(scienceStudent.calculateAverage()));
+		    System.out.println("Final Exam Grade: " + scienceStudent.getFinalExamGrade() + ". Final Average: " + scienceStudent.calculateAverage() + ", Letter Grade: " + student.calculateLetterGrade(scienceStudent.calculateAverage()));
 		    System.out.println(" ");
 		  }
 		}
@@ -127,7 +129,7 @@ public class Student {
 		  if (student instanceof MathStudent) {
 		    MathStudent mathStudent = (MathStudent) student;
 		    System.out.println("Math Student: " + student.getFirstName() + " " + student.getLastName());
-		    System.out.println("Final Average: " + mathStudent.calculateAverage() + ", Letter Grade: " + student.calculateLetterGrade(mathStudent.calculateAverage()));
+		    System.out.println("Final Exam Grade: " + mathStudent.getFinalExamGrade() + ". Final Average: " + mathStudent.calculateAverage() + ", Letter Grade: " + student.calculateLetterGrade(mathStudent.calculateAverage()));
 		    System.out.println(" ");
 		  }
 		}
@@ -172,19 +174,8 @@ public class Student {
 
 
 
-
-
-
-
-
-
-
   }
 	
-
-
-
-
 
 	
   public static String calculateLetterGrade(double average) {
@@ -274,15 +265,15 @@ public class Student {
 
 	//     // Print the grade distribution
 	//     writer.println("\nGrade Distribution");
-	//     writer.printf("A: ", aCount);
-	//     writer.printf(" ");
-	//     writer.printf("B: ", bCount);
-	//     writer.printf(" ");
-	//     writer.printf("C: ", cCount);
-	//     writer.printf(" ");
-	//     writer.printf("D: ", dCount);
-	//     writer.printf(" ");
-	//     writer.printf("F: ", fCount);
+	//     writer.println("A: ", aCount);
+	//     writer.println(" ");
+	//     writer.println("B: ", bCount);
+	//     writer.println(" ");
+	//     writer.println("C: ", cCount);
+	//     writer.println(" ");
+	//     writer.println("D: ", dCount);
+	//     writer.println(" ");
+	//     writer.println("F: ", fCount);
 	// }
 
 
