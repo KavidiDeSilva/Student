@@ -1,5 +1,10 @@
 # Student
-Challenge 4
+This code is for a student record keeping system. The base class "Student" has methods for reading student data from a file, checking for emptiness, printing data to a file, calculating letter grades, and printing a grade distribution. 
+
+The derived classes "EnglishStudent", "ScienceStudent", and "MathStudent" have methods for calculating grades based on specific criteria for each subject. To run the file, navigate to the file path in the command prompt and use the commands "javac" to compile the code and "java Student" to execute it.
+
+
+## Challenge 4
 
 Student (Base Class)
 
